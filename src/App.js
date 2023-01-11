@@ -3,42 +3,48 @@ import {length12pw, length20pw, length32pw} from './random.js';
 import {eff} from './dice.js';
 
 function App() {
+
+  let url = "https://www.eff.org/dice";
+
   return (
     <div className="App">
         <h1>Hello welcome to my simple password generator!</h1>
 
-        <p>Option 1 creates a randomized password that contains letters, digits, and special characters.
-          It will allow you to choose an option between 12, 16, 20, or 32 character length.
-        </p>
-
-        <p>Option 2 will use the EFF Dice-Generated Passphrase to generate a randomized six-word passphrase
-        </p>
+        <p>The first three buttons creates a randomized password.</p>
+        <p>Each password contains letters, digits, and special characters.</p>
+        <p>You can choose between 12, 20, or 32 characters long.</p>
 
         <div>
           <button onClick = {length12pw}>
-            Option 1
+            12 character password
           </button>
         </div>
 
         <div>
           <button onClick = {length20pw}>
-            Option 2
+            20 character password
           </button>
         </div>
 
         <div>
           <button onClick = {length32pw}>
-            Option 3
+            32 character password
           </button>
         </div>
 
+        <p>This button will create a EFF Dice-Generated Passphrase.</p>
+        <p>Its just six random words combined to make one password phrase.</p>
+        <p>This is recommended by the <a href={url}>Electric Frontier Foundation</a>.</p>
+
         <div>
           <button onClick = {eff}>
-            Option 4
+            EFF passphrase
           </button>
         </div>
+
     </div>
   );
+
 }
 
 export default App;
