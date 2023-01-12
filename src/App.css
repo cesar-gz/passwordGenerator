@@ -1,9 +1,9 @@
 .App {
   text-align: center;
   background-color: black;
-  color: green;
+  color: #33b249;
   font-size: large;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -12,9 +12,54 @@ body {
 
 button {
   background-color: rgb(6, 61, 24);
-  color: lightgoldenrodyellow;
+  color:#ffbd03;
+  width: 15%;
+  font-size: medium;
+  padding: 15px 30px;
+  border-radius: 12px;
+  border: 2px solid #ffbd03;
+  transition-duration: 0.4s;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 h1 {
-  color: lightgoldenrodyellow;
+  color: #ffbd03;
+}
+
+/* credit for typewriter effect goes to: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .11em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
