@@ -10,7 +10,7 @@ function App() {
     <div className="App">
         
         <div class= "typewriter">
-        <h1>Hello welcome to my simple password generator!</h1>
+        <h1>Hello, welcome to my simple password generator!</h1>
         </div>
 
         <p>The first three buttons creates a randomized password.</p>
